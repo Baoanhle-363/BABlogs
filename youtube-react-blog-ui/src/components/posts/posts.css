@@ -1,0 +1,99 @@
+/* Container for posts */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between columns */
+  justify-content: center; /* Center posts in the container */
+  margin: 20px auto;
+  max-width: 1200px; /* Max width for a more refined layout */
+}
+
+/* Style for each post column */
+.post-column {
+  flex: 1 1 30%; /* Each column will take up 30% of width */
+  margin: 10px;
+  background-color: #ffffff; /* White background for each post */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  overflow: hidden; /* Prevents elements from overflowing */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: space-between; /* Distribute space between content */
+  padding: 15px;
+}
+
+/* Hover effect for posts */
+.post-column:hover {
+  transform: translateY(-5px); /* Lift the post on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Image styles: Focus on making the image larger and adding effect */
+.post-column img {
+  width: 100%; /* Make images fill the column */
+  height: 250px; /* Fix image height */
+  object-fit: cover; /* Ensure the image covers the area without distorting */
+  border-radius: 15px 15px 0 0; /* Rounded top corners */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom effect */
+  margin-bottom: 15px; /* Space between the image and content */
+}
+
+/* Hover effect for image */
+.post-column:hover img {
+  transform: scale(1.05); /* Zoom in image */
+  filter: brightness(80%); /* Darken image slightly for effect */
+}
+
+/* Title and description */
+.post-column h3 {
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333333; /* Dark grey for title */
+  margin-bottom: 10px; /* Space between title and description */
+}
+
+.post-column p {
+  padding: 0;
+  font-size: 1em;
+  color: #666666; /* Lighter grey for description */
+  line-height: 1.5;
+  margin-bottom: 15px; /* Space below description */
+}
+
+/* Categories and date */
+.post-column .categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  font-size: 0.9em;
+  color: #999999; /* Light grey for meta info */
+  margin-bottom: 15px; /* Space between categories and date */
+}
+
+.post-column .categories .category {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85em;
+}
+
+.post-column .date {
+  font-style: italic;
+  color: #aaaaaa; /* Light grey for date */
+}
+
+/* For small screens (responsive design) */
+@media (max-width: 768px) {
+  .post-column {
+    flex: 1 1 45%; /* Adjust to 45% width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .post-column {
+    flex: 1 1 100%; /* Adjust to 100% width on mobile */
+  }
+}

@@ -1,0 +1,78 @@
+.sidebar {
+  flex: 4; /* Tăng giá trị flex để phân bổ không gian nhiều hơn */
+  height: fit-content;
+  margin: 20px;
+  padding-bottom: 30px;
+  background-color: #fdfbfb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa tất cả các phần tử trong sidebar theo chiều ngang */
+  justify-content: flex-start; /* Căn các phần tử từ trên xuống dưới */
+  width: 300px; /* Đặt một chiều rộng cố định cho sidebar */
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa các phần tử con bên trong mỗi sidebarItem */
+  width: 100%; /* Đảm bảo các item chiếm toàn bộ chiều rộng của sidebar */
+  margin-bottom: 15px; /* Khoảng cách giữa các item */
+}
+
+.sidebarTitle {
+  margin: 10px 0;
+  padding: 5px;
+  width: 100%; /* Đảm bảo tiêu đề chiếm hết chiều rộng */
+  border-top: solid 1px #a7a4a4;
+  border-bottom: solid 1px #a7a4a4;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #222222;
+  font-weight: 600;
+}
+
+.sidebarItem > img {
+  margin-top: 15px;
+  width: 200px; /* Giảm kích thước ảnh để nó vừa vặn hơn */
+  height: 200px;
+  border-radius: 50%; /* Tạo hình tròn cho ảnh */
+}
+
+.sidebarItem > p {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Căn lề 2 bên cho đoạn văn */
+  margin: 0; /* Loại bỏ margin mặc định */
+  max-width: 90%; /* Giới hạn chiều rộng của văn bản */
+}
+
+.sidebarList {
+  list-style-type: none;
+  margin-bottom: 30px;
+  width: 100%; /* Đảm bảo các item trong danh sách vừa với chiều rộng mở rộng */
+}
+
+.sidebarListItem {
+  display: block; /* Đổi từ inline-block sang block để mỗi item chiếm một hàng */
+  width: 100%; /* Chiếm toàn bộ chiều rộng của sidebar */
+  margin-top: 15px;
+  cursor: pointer;
+  text-align: center; /* Căn giữa văn bản trong các item danh sách */
+}
+
+.sidebarSocial {
+  margin-top: 15px;
+  width: 100%; /* Đảm bảo các icon mạng xã hội chiếm đủ không gian */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa các icon mạng xã hội */
+}
+
+.sidebarIcon {
+  font-size: 18px; /* Tăng nhẹ kích thước icon */
+  margin-left: 10px;
+}
